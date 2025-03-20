@@ -23,6 +23,11 @@ The cameras (Intel Realsense D430I) of our physical device could also be simulat
 
 Adding a dummy robot, whose motion is controlled with the Keyboard and with some perturbations reproducing a human gait, permitted the creation of a simulation where we could test our algorithms in a controlled way.
 
+<div class="info">new</div>
+
+<!-- <div id="rerun-viewer-container" style="width: 100%; height: 500px;"></div> -->
+<script src="{{ '/assets/js/dist/rerun-bundle.js' | relative_url }}"></script>
+
 This also reduced the costs for data annotation, as using built-in segmentation functionalities allowed the generation of ground truth for panoptic segmentation in each simulated frame.
 
 Thanks to this, I was able to:
