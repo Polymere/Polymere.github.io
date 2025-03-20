@@ -1,9 +1,7 @@
 ---
 layout: single
 title: Real2Sim
-excerpt: <i>When having a robotics pipeline that works in the real world is not enough, going back in simulation can help.
-header:
-  teaser: "webots_example.png"
+excerpt: <i>When having a robotics pipeline that works in the real world is not enough, going back in simulation can help. <br/><img src='/images/webots_example.png' style='width:1200px;'>'
 collection: academic
 tags:
   - biped
