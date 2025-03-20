@@ -1,6 +1,7 @@
 ---
+layout: single
 title: Real2Sim
-excerpt: <i>When having a robotics pipeline that works in the real world is not enough, going back in simulation can help.
+excerpt: <i>When having a robotics pipeline that works in the real world is not enough, going back in simulation can help. <br/><img src='/images/webots_example.png' style='width:1200px;'>'
 collection: academic
 tags:
   - biped
@@ -10,6 +11,9 @@ categories: biped.ai
 
 A challenge of most robotics projects is the translation of algorithms that work in a simulated environment to the real world. This happens for most projects involving a physical robot with motors, as  they usually start by  implementing the perception and control pipelines in simulation so that failures don't result in >10k $ of hardware costs when the robot falls.
 The sim2real problem is then to be able to transform a robot that works in simulation to one that works in the real world.
+
+![Simulation Example](/images/webots_example.png){: .align-center}
+*Simulation environment*
 
 The challenge we faced  at biped is the opposite of that one. Our product was aimed towards visually impaired humans, giving auditory feedback to help them locate obstacles, but leaving the obstacle avoidance and joint control parts to them.
 
@@ -27,6 +31,26 @@ Adding a dummy robot, whose motion is controlled with the Keyboard and with some
 
 <!-- <div id="rerun-viewer-container" style="width: 100%; height: 500px;"></div> -->
 <script src="{{ '/assets/js/dist/rerun-bundle.js' | relative_url }}"></script>
+
+<div style="text-align: center;">
+  <video controls loop style="max-width: 100%;">
+    <source src="/files/webots_shoulder.webm" type="video/webm">
+  </video>
+</div>
+
+*Office like environment, with a simulated shoulder movement when walking*
+
+The cameras (Intel Realsense D430I) of our physical device could also be simulated by using  a combination of [simulated sensors](https://cyberbotics.com/doc/guide/sensors), together with a custom noise models based on the characteristics of the realsense cameras.
+
+Adding a dummy robot, whose motion is controlled with the Keyboard and with some perturbations reproducing a human gait, permitted the creation of a simulation where we could test our algorithms in a controlled way.
+
+<div style="text-align: center;">
+  <video controls loop style="max-width: 100%;">
+    <source src="/files/simulated_environment.mp4" type="video/mp4">
+  </video>
+</div>
+
+*Simulated environment showcasing synthetic sensor noise*
 
 This also reduced the costs for data annotation, as using built-in segmentation functionalities allowed the generation of ground truth for panoptic segmentation in each simulated frame.
 
