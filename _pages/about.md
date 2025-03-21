@@ -13,4 +13,4 @@ At [biped.ai](https://biped.ai), I led the team that built the world first auton
 
 I have a sweet spot for emergent behaviors, meta-heuristic optimization, reinforcement and imitation learning.
 
-[Read more](/portfolio/01-real2sim/), or [Download resume](files/paul_prevel_cv_200325.pdf)
+[Read more](/portfolio/01-real2sim/), or [download my resume](files/paul_prevel_cv_200325.pdf)
